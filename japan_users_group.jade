@@ -1,63 +1,12 @@
-// head
-  // link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet')
-//   title Meteor Japan Users Group
-//
-// body
-//   article.container
-//     header
-//       +navbar
-//
-//     section.main
-//       hgroup
-//         h1 Meteor Japan Users Group
-//         h3 Meteorのユーザーグループ
-//
-//     section.about
-//
-//     section.events
-//
-//     footer
-//       +footer
-//
-//
-//
-//
-// template(name="hello")
-//   button Click Me
-//   p You've pressed the button !{counter} times.
-//
-//
-// template(name='navbar')
-//   nav.navbar.navbar-inverse.nav-justified.navbar-static-top.navbar-fixed-top(role='navigation')
-//     .container
-//       .navbar-header
-//         a.navbar-brand(href='') Meteor Japan Users Group
-//
-//       div.collapse.navbar-collapse#bs-example-navbar-collapse-1
-//         ul.nav.navbar-nav.navbar-right
-//           li
-//             a(href='') About
-//           li
-//             a(href='') Events
-//           li
-//             a(href='') Meteor.com
-//
-//
-// template(name='footer')
-//   ul.footer
-//     li Github
-//     li copywrite
-//
-//
-
-
 head
-  link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet')
+  title Meteor Japan Users Group
+  link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet prefetch')
 
 body#page-top(data-spy='scroll', data-target='.navbar-fixed-top')
   nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
     .container
       +navbar
+
   header.intro
     +intro
 
@@ -65,12 +14,7 @@ body#page-top(data-spy='scroll', data-target='.navbar-fixed-top')
     +about
 
   section#download.content-section.text-center
-    .download-section
-      .container
-        .col-lg-8.col-lg-offset-2
-          h2 Download Grayscale
-          p You can download Grayscale for free on the preview page at Start Bootstrap.
-          a.btn.btn-default.btn-lg(href='http://startbootstrap.com/template-overviews/grayscale/') Visit Download Page
+    +event
 
   section#contact.container.content-section.text-center
     +contact
@@ -104,23 +48,19 @@ template(name='navbar')
 
 
 template(name='intro')
-  .intro-body
-    .container
-      .row
-        .col-md-8.col-md-offset-2
-          h1.brand-heading Grayscale
-          p.intro-text
-            | A free, responsive, one page Bootstrap theme.
-            br
-            | Created by Start Bootstrap.
-          a.btn.btn-circle.page-scroll(href='#about')
-            i.fa.fa-angle-double-down.animated
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        h1 Meteor
+        h2 Japan Users Group
+        a.btn.btn-circle.page-scroll(href='#about')
+          i.fa.fa-angle-double-down.animated
 
 
 template(name='about')
   .row
     .col-lg-8.col-lg-offset-2
-      h2 About Grayscale
+      h2 About
       p
         | Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on 
         a(href='http://startbootstrap.com/template-overviews/grayscale/') the preview page
@@ -135,7 +75,15 @@ template(name='about')
         | Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.
 
 
-tempalate(name='contact')
+template(name='event')
+  .event-section
+    .container
+      .col-lg-8.col-lg-offset-2
+        h2 Download Grayscale
+        p You can download Grayscale for free on the preview page at Start Bootstrap.
+
+
+template(name='contact')
   .row
     .col-lg-8.col-lg-offset-2
       h2 Contact Start Bootstrap
