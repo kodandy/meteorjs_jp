@@ -1,25 +1,19 @@
 head
-  title Meteor Japan Users Group
   link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', rel='stylesheet prefetch')
 
 body#page-top(data-spy='scroll', data-target='.navbar-fixed-top')
-  nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
-    .container
-      +navbar
+  // nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
+  //   .container
+  //     +navbar
 
   header.intro
     +intro
 
-  section#about.container.content-section.text-center
-    +about
-
-  section#download.content-section.text-center
-    +event
+  section#links.container.content-section.text-center
+    +links
 
   section#contact.container.content-section.text-center
     +contact
-
-  #map
 
   footer
     +footer
@@ -28,23 +22,23 @@ body#page-top(data-spy='scroll', data-target='.navbar-fixed-top')
 
 // === template =====================================
 
-template(name='navbar')
-  .navbar-header
-    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
-      i.fa.fa-bars
-    a.navbar-brand.page-scroll(href='#page-top')
-      i.fa.fa-play-circle
-      span.light Meteor Japan Users Group
-  .collapse.navbar-collapse.navbar-right.navbar-main-collapse
-    ul.nav.navbar-nav
-      li.hidden
-        a(href='#page-top')
-      li
-        a.page-scroll(href='#about') About
-      li
-        a.page-scroll(href='#download') Download
-      li
-        a.page-scroll(href='#contact') Contact
+// template(name='navbar')
+//   .navbar-header
+//     button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+//       i.fa.fa-bars
+//     a.navbar-brand.page-scroll(href='#page-top')
+//       i.fa.fa-play-circle
+//       span.light Meteor Japan Users Group
+//   .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+//     ul.nav.navbar-nav
+//       li.hidden
+//         a(href='#page-top')
+//       li
+//         a.page-scroll(href='#about') About
+//       li
+//         a.page-scroll(href='#download') Download
+//       li
+//         a.page-scroll(href='#contact') Contact
 
 
 template(name='intro')
@@ -53,62 +47,66 @@ template(name='intro')
       .col-md-8.col-md-offset-2
         h1 Meteor
         h2 Japan Users Group
-        a.btn.btn-circle.page-scroll(href='#about')
-          i.fa.fa-angle-double-down.animated
 
 
-template(name='about')
+template(name='links')
   .row
     .col-lg-8.col-lg-offset-2
-      h2 About
-      p
-        | Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on 
-        a(href='http://startbootstrap.com/template-overviews/grayscale/') the preview page
-        | . The theme is open source, and you can use it for any purpose, personal or commercial.
-      p
-        | This theme features stock photos by 
-        a(href='http://gratisography.com/') Gratisography
-        |  along with a custom Google Maps skin courtesy of 
-        a(href='http://snazzymaps.com/') Snazzy Maps
-        | .
-      p
-        | Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.
-
-
-template(name='event')
-  .event-section
-    .container
-      .col-lg-8.col-lg-offset-2
-        h2 Download Grayscale
-        p You can download Grayscale for free on the preview page at Start Bootstrap.
+      h2 Meteor 関連サイト
+      ul
+        li
+          a(href='https://www.meteor.com/' target='_blank') Meteor.com
+          p Meteor公式サイト
+        li
+          a(href='http://docs.meteor.com/#/full/' target='_blank') 公式ドキュメント
+          p Meteorの公式ドキュメント
+            br
+            | （チュートリアルあり）
+        li
+          a(href='http://meteor-fan.axlight.com/' target='_blank') Meteor Fan
+          p Meteorの日本語情報サイト
+        li
+          a(href='http://www.meetup.com/Meteor-Tokyo/' target='_blank') Meteor Tokyo
+          p 東京でのMeteor関連イベント
+        li
+          a(href='https://book.discovermeteor.com/' target='_blank') Discover Meteor
+          p 英語で書かれたMeteor関連の電子書籍（有料）
+        li
+          a(href='https://ja.discovermeteor.com/' target='_blank') Discover Meteor（日本語）
+          p Discover Meteorの日本語版（無料）
+        li
+          a(href='https://www.manning.com/books/meteor-in-action' target='_blank') Meteor in Action
+          p 英語で書かれたMeteor関連の電子書籍（有料）
+        li
+          a(href='http://www.meetup.com/Meteor-Tokyo/' target='_blank') Meteor Tokyo
+          p 東京でのMeteor関連イベント
+        li
+          a(href='https://www.sitepoint.com/premium/courses/your-first-meteor-application-2886' target='_blank') Site Point
+          p Web上でMeteorを学べるサイト
+        li
+          a(href='https://twitter.com/search?q=%23meteorjs_jp&src=typd' target='_blank') Twitter
+          p TwitterのMeteor日本語コミュニティ
+            br
+            | （#meteorjs_jp）
 
 
 template(name='contact')
   .row
     .col-lg-8.col-lg-offset-2
-      h2 Contact Start Bootstrap
-      p
-        | Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!
-      p
-        a(href='mailto:feedback@startbootstrap.com') feedback@startbootstrap.com
+      h2 連絡先
       ul.list-inline.banner-social-buttons
         li
-          a.btn.btn-default.btn-lg(href='https://twitter.com/SBootstrap')
-            i.fa.fa-twitter.fa-fw
-            span.network-name Twitter
-        li
-          a.btn.btn-default.btn-lg(href='https://github.com/IronSummitMedia/startbootstrap')
+          a.btn.btn-default.btn-lg(href='https://github.com/besutome/meteorjs_jp' target='_blank')
             i.fa.fa-github.fa-fw
             span.network-name Github
         li
-          a.btn.btn-default.btn-lg(href='https://plus.google.com/+Startbootstrap/posts')
-            i.fa.fa-google-plus.fa-fw
-            span.network-name Google+
+          a.btn.btn-default.btn-lg(href='https://gitter.im/besutome/meteorjs_jp?utm_source=share-link&utm_medium=link&utm_campaign=share-link' target='_blank')
+            i.fa.fa-github.fa-fw
+            span.network-name Gitter
 
 
 template(name='footer')
   .container.text-center
-    p Copyright © Your Website 2014
   // jQuery Version 1.11.0
   script(src='js/jquery-1.11.0.js')
     // Bootstrap Core JavaScript
