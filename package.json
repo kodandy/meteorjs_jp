@@ -1,0 +1,32 @@
+{
+  "name": "meteorjs_jp",
+  "version": "1.0.0",
+  "description": "[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/besutome/meteorjs_jp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)",
+  "main": "",
+  "devDependencies": {
+    "browserify": "",
+    "coffeeify": "",
+    "jade": "",
+    "live-server": "",
+    "stylus": "",
+    "watchify": ""
+  },
+  "scripts": {
+    "start": "npm run watch-jade & npm run watch-stylus & npm run serve",
+    "serve": "live-server ./",
+    "watch-jade": "jade -w src -o ./",
+    "watch-stylus": "stylus src -w -o ./",
+    "watch-js": "watchify src/js/main.coffee -v -t coffeeify -o build/js/bundle.js",
+    "build": "browserify src/js/main.coffee -t coffeeify -o build/js/bundle.js && jade src/html/ -o build/ && stylus src/css/ -o build/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/besutome/meteor_japan_users_gruop.git"
+  },
+  "author": "besutome",
+  "license": "ISC",
+  "bugs": {
+    "url": "http://besutome.github.io/meteorjs_jp"
+  },
+  "homepage": "https://github.com/besutome/meteor_japan_users_gruop#readme"
+}

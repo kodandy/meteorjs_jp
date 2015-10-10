@@ -1,0 +1,66 @@
+body {
+  background-color: #222;
+  color: #eee;
+}
+body h2 {
+  font-size: 27px;
+  font-weight: bold;
+}
+body .navbar {
+  display: none;
+}
+body .intro {
+  height: 300px;
+  text-align: center;
+  background: url("public/intro.jpg") no-repeat center center scroll;
+}
+body .intro h1 {
+  font-family: serif;
+  margin-top: 50px;
+  font-size: 120px;
+  text-shadow: 0px 0px 10px #fff;
+  opacity: 0.8;
+  font-weight: bold;
+  color: #111;
+}
+body .intro h2 {
+  text-shadow: 0px 0px 10px #fff;
+  opacity: 0.8;
+  font-weight: bold;
+  font-size: 37px;
+  margin-top: -10px;
+  color: #111;
+}
+body #links {
+  width: 720px;
+}
+body #links h2 {
+  margin-bottom: 25px;
+  border: 3px solid #c0c0c0;
+  border-radius: 5px;
+  padding: 5px 0;
+  margin-top: 30px;
+}
+body #links ul {
+  text-align: left;
+  list-style: none;
+}
+body #links ul li {
+  margin-bottom: 20px;
+}
+body #links ul li a {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+body #links ul li p {
+  font-size: 17px;
+  margin-left: 20px;
+}
+body #contact {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body #contact h2 {
+  font-size: 22px;
+}
